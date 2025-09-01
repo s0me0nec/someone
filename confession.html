@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Aizen Louisse Natividad Cosme</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fbeff5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+    }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .heart {
+      font-size: 4rem;
+      color: red;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .envelope {
+      width: 200px;
+      height: 120px;
+      background: #ffb6c1;
+      position: relative;
+      margin-top: 20px;
+    }
+    .envelope:before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 60px solid #ffb6c1;
+    }
+    .letter {
+      display: none;
+      max-width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      background: #fff8dc;
+      padding: 20px;
+      border: 2px solid #deb887;
+      border-radius: 10px;
+      font-family: "Times New Roman", serif;
+      line-height: 1.6;
+    }
+    .poem {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff;
+      border-left: 5px solid #deb887;
+      font-style: italic;
+      white-space: pre-line;
+    }
+    button.close-btn {
+      margin-top: 15px;
+      padding: 8px 12px;
+      background: #ffb6c1;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Heart -->
+  <button id="heart" class="heart">❤️</button>
+
+  <!-- Envelope -->
+  <button id="envelope" class="envelope"></button>
+
+  <!-- Letter -->
+  <div id="letter" class="letter">
+    <h2>To Aizen,</h2>
+
+    <p>
+      Hi ulet, Aizen! I'm writing another message para sayo to clear things up. I'm not Tristan nor Nat. 
+      If you think my previous message was made by ChatGPT, well I'm writing this to prove you wrong. 
+      Aizen, I like you for every part of you—your flaws, your talents, just everything about you. 
+      I might've said it again but I do mean it. I like—no, I love you for being you and just the way you are 
+      is more than enough. Basta ikaw, sapat na.
+    </p>
+
+    <p>
+      Not to be corny or anything, but no matter how many words I say about loving, caring, and yearning for you, 
+      I mean every part of it—with all of my hypothalamus. I deeply admire you for your funny, kind, and caring 
+      personality. Your smile immediately makes up and radiates my day up. "You're the sunshine on my lifeee", literally. 
+      Because you yourself, is so colorful in my world of monochrome.
+    </p>
+
+    <p>
+      You make everything so tolerable, my Paraluman. I can't stop but smile when I think about you. 
+      "We only met each other just the other day but you already got me feeling some type of way", 
+      this Chase Atlantic song immediately made me think about you. I know you love Chase Atlantic and Arthur Nery 
+      so I learned some of their songs because of you. Because of you, I was inspired to actually learn something new. 
+      I love all types of music but rarely listen to Chase Atlantic—but for you, I would.
+    </p>
+
+    <p>
+      I really do mean everything I say. To be completely honest, I'm a yapper. But for you, I would love to listen to you all day. 
+      I would love to know about how your day went. I would love to spend time with you like going to church—reflecting on the Bible together. 
+      Anything with you involved, I love.
+    </p>
+
+    <p>
+      Once again, I'll end my message with a poem I made and dedicated to you called 
+      <em>"Kay Tagal kitang mamahalin"</em> which I wrote on exactly August 5, 2025—one year of loving you.
+    </p>
+
+    <div class="poem">
+Mahigit isang taon na kitang mahal,
+at wala akong plano para tumigil.
+Dahil walang makakapigil,
+sa puso kong gusto kang maging akin.
+
+Oo, sa malayo lang kita minamahal,
+pero gusto kitang alagaan.
+Gusto ko madarama mo ang
+pagibig na lubos at walang hangganan.
+
+Ngunit ang gusto ko lang ay mahalin ka
+at yun ay sapat na lamang
+para sa puso kong lihim kang mahalin.
+Dahil ikaw ang ligaya ng pusong akin.
+    </div>
+
+    <button class="close-btn" onclick="closeEnvelope()">Close</button>
+  </div>
+
+  <script>
+    const heart = document.getElementById('heart');
+    const envelope = document.getElementById('envelope');
+    const letter = document.getElementById('letter');
+
+    function openEnvelope() {
+      heart.style.display = 'none';
+      envelope.style.display = 'none';
+      letter.style.display = 'block';
+    }
+
+    function closeEnvelope() {
+      heart.style.display = 'block';
+      envelope.style.display = 'block';
+      letter.style.display = 'none';
+      window.scrollTo(0, 0);
+    }
+
+    // Works on both desktop & mobile since they are <button>
+    heart.addEventListener('click', openEnvelope);
+    envelope.addEventListener('click', openEnvelope);
+  </script>
+</body>
+</html>
